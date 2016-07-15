@@ -1,13 +1,14 @@
 # SOLID principles
 
-## Single responsibility principle
+Find the video lessons [here](https://laracasts.com/series/solid-principles-in-php).
+
+## Single Responsibility Principle
 
 * A class should have one, and only one, reason to change.
 * Or each class should have a single responsibility.
 * Classes that are not entirely conducive to change.
-* See a full example at https://laracasts.com/series/solid-principles-in-php/episodes/1.
 
-## Open-Closed principle
+## Open-Closed Principle
 
 * Entities(class, method, function) should be:
     * open for extension
@@ -22,7 +23,22 @@
         * It’s very difficult to follow perfectly.
         * But it’s something you strive for.
 
-## Dependency inversion principle
+## Liskov Substitution Principle
+
+* Mathematical definition: Let *q(x)* be a property provable about objects *x* of type *T*. Then *q(y)* should be provable for objects *y* of type *S*, where *S* is a subtype of *T*.
+* In a computer program
+    * If *B* is a subtype of *A*, then objects of type *A* may be replaced with objects of type *B*.
+    * **Derived classes must be substitutable for their base classes**.
+* Examples of a violations
+    * Example1: When throwing an exception.
+    * Example2: When you return different types.
+* Here is a list of ways to adhere to LSP:
+    * Signature must match
+    * Preconditions can’t be greater
+    * Post conditions at least equal to
+    * Exception types must match
+
+## Dependency Inversion Principle
 
 * Not the same as dependency injection!
 * Depend on abstractions, not on concretions.
